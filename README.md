@@ -2,15 +2,20 @@ CKEditor widget for Yii Framework
 ============
 
 Simple Yii CKEditor widget.
+
 CKEditor - WYSIWYG editor for everyone.
+
 Widget generate CHtml::activeTextArea with same properties.
+
 Tested with CKEditor 4+ version.
 
 Installation
 ------------
 
 Copy this widget to Extensions folder.
+
 Download CKEditor from http://ckeditor.com/download
+
 Paste CKEditor's files to extension assets folder.
 
 Usage
