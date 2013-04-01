@@ -5,7 +5,7 @@
  * @property string $assetsPath
  * @property string $assetsUrl
  * @author Yuriy Firs <firs.yura@gmail.com>
- * @version 0.1
+ * @version 0.1.1
  */ 
 class CKEditorWidget extends CInputWidget {
     /**
@@ -52,7 +52,7 @@ class CKEditorWidget extends CInputWidget {
                 "CKEDITOR.editorConfig = function( config ) {
                 ".$this->configJS."
                 };",
-                CClientScript::POS_HEAD
+                Yii::app()->clientScript->coreScriptPosition
             );
     }
 
@@ -71,9 +71,10 @@ class CKEditorWidget extends CInputWidget {
     public function run()
     {
         // add class ckeditor
-        if (strpos($this->htmlOptions['class'], 'ckeditor')===false) {
+        if (array_key_exists('class', $this->htmlOptions) && strpos($this->htmlOptions['class'], 'ckeditor') === false) {
             $this->htmlOptions['class'] .= ' ckeditor';
-        }
+        } elseif (!array_key_exists('class', $this->htmlOptions))
+            $this->htmlOptions['class'] = 'ckeditor';
         echo CHtml::activeTextArea($this->model,$this->attribute,$this->htmlOptions);
     }
 
