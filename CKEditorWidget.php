@@ -95,7 +95,7 @@ class CKEditorWidget extends CInputWidget {
     {
         $return = '';
         foreach ($this->config as $key=>$value) {
-            $return .= "config.".$key." = '".$value."'; ";
+            $return .= "config.".$key." = ".json_encode($value)."; ";
         }
         return $return;
     }
