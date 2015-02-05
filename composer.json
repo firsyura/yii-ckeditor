@@ -1,0 +1,16 @@
+{
+  "name": "firsyura/yii-ckeditor",
+  "description": "",
+  "keywords": ["yii", "extension", "widget", "ckeditor", "wysiwyg"],
+  "homepage": "https://github.com/firsyura/yii-ckeditor",
+  "type": "yii-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Yuriy Firs"
+    }
+  ],
+  "require": {
+    "yiisoft/yii": "*"
+  }
+}
